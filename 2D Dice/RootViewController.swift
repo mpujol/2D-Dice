@@ -42,7 +42,7 @@ class RootViewController: UIViewController {
                 
                 switch informationSequence {
                 case 0:
-                    infoLabel.text = "and that's all you need to know. \n Have fun!"
+                    infoLabel.text = "And that's all you need to know. \n Have fun!"
                     onBoardingFinished = true
                     
                     UserDefaults.standard.set(true, forKey: "FinishedOnBoarding")
