@@ -44,7 +44,7 @@ class RootViewController: UIViewController {
                 case 0:
                     infoLabel.text = "That's all you need to know. \n Have fun!"
                     onBoardingFinished = true
-                    infoButtonOutlet.isEnabled = true
+                    
                     UserDefaults.standard.set(true, forKey: "FinishedOnBoarding")
                     
                 case 1:
@@ -60,8 +60,9 @@ class RootViewController: UIViewController {
                 }
                 
             } else {
-                UIView.animate(withDuration: 1.25, animations: { 
+                UIView.animate(withDuration: 1.0, animations: {
                     self.infoStack.alpha = 0
+                    self.infoButtonOutlet.isEnabled = true
                 })
             }
             
