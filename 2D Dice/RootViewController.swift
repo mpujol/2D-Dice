@@ -42,8 +42,9 @@ class RootViewController: UIViewController {
                 
                 switch informationSequence {
                 case 0:
-                    infoLabel.text = "If you wanna go though the guide again, tap the help icon on the upper left. \n Enjoy your game!"
+                    infoLabel.text = "That's all you need to know. \n Have fun!"
                     onBoardingFinished = true
+                    infoButtonOutlet.isEnabled = true
                     UserDefaults.standard.set(true, forKey: "FinishedOnBoarding")
                     
                 case 1:
@@ -97,6 +98,7 @@ class RootViewController: UIViewController {
         if UserDefaults.standard.bool(forKey: "FinishedOnBoarding") == false {
             
             onBoardingFinished = false
+            infoButtonOutlet.isEnabled = false
             
             
         } else {
@@ -183,8 +185,10 @@ class RootViewController: UIViewController {
         
         UIView.animate(withDuration: 1.25) {
             self.infoStack.alpha = 1
+            self.infoButtonOutlet.isEnabled = false
         }
         onBoardingFinished = false
+        
         
         
     }
