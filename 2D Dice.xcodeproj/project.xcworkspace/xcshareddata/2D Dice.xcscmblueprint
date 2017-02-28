@@ -1,14 +1,18 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D6FF04387F61C1E59EA758FF8FF2217F165B141D",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D6FF04387F61C1E59EA758FF8FF2217F165B141D+++70B90AF",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "D6FF04387F61C1E59EA758FF8FF2217F165B141D" : 9223372036854775807
+    "D6FF04387F61C1E59EA758FF8FF2217F165B141D+++70B90AF" : 9223372036854775807,
+    "D6FF04387F61C1E59EA758FF8FF2217F165B141D+++18643ED" : 9223372036854775807,
+    "D6FF04387F61C1E59EA758FF8FF2217F165B141D+++6F0B326" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "620E107A-79A9-4DE8-85F0-420B81C062B1",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "D6FF04387F61C1E59EA758FF8FF2217F165B141D" : ""
+    "D6FF04387F61C1E59EA758FF8FF2217F165B141D+++70B90AF" : "2D-Dice\/",
+    "D6FF04387F61C1E59EA758FF8FF2217F165B141D+++18643ED" : "",
+    "D6FF04387F61C1E59EA758FF8FF2217F165B141D+++6F0B326" : ""
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "2D Dice",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -17,12 +21,17 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mpujol\/2D-Dice.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D6FF04387F61C1E59EA758FF8FF2217F165B141D"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D6FF04387F61C1E59EA758FF8FF2217F165B141D+++18643ED"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mpujol\/2D-Dice.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D6FF04387F61C1E59EA758FF8FF2217F165B141D"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D6FF04387F61C1E59EA758FF8FF2217F165B141D+++6F0B326"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mpujol\/2D-Dice.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D6FF04387F61C1E59EA758FF8FF2217F165B141D+++70B90AF"
     }
   ]
 }

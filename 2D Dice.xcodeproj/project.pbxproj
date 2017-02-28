@@ -8,12 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		BC8BA8D91E623BF800C4D233 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BA8D81E623BF800C4D233 /* AppDelegate.swift */; };
-		BC8BA8DB1E623BF800C4D233 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BA8DA1E623BF800C4D233 /* ViewController.swift */; };
 		BC8BA8DE1E623BF800C4D233 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8BA8DC1E623BF800C4D233 /* Main.storyboard */; };
 		BC8BA8E01E623BF800C4D233 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8BA8DF1E623BF800C4D233 /* Assets.xcassets */; };
 		BC8BA8E31E623BF800C4D233 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8BA8E11E623BF800C4D233 /* LaunchScreen.storyboard */; };
 		BC8BA8EE1E623BF800C4D233 /* _D_DiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BA8ED1E623BF800C4D233 /* _D_DiceTests.swift */; };
 		BC8BA8F91E623BF800C4D233 /* _D_DiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8BA8F81E623BF800C4D233 /* _D_DiceUITests.swift */; };
+		BCB818A91E64EB9A00D2F698 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB818A81E64EB9A00D2F698 /* RootViewController.swift */; };
+		BCB818AB1E64EC0200D2F698 /* DiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB818AA1E64EC0200D2F698 /* DiceModel.swift */; };
+		BCB818B01E64EC4800D2F698 /* DiceHolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB818AF1E64EC4800D2F698 /* DiceHolderView.swift */; };
+		BCB818B31E64EC5300D2F698 /* OvalOutlineLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB818B11E64EC5300D2F698 /* OvalOutlineLayer.swift */; };
+		BCB818B41E64EC5300D2F698 /* RoundedRectLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB818B21E64EC5300D2F698 /* RoundedRectLayer.swift */; };
+		BCB818BC1E64EC5D00D2F698 /* MiddlePip.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB818B51E64EC5D00D2F698 /* MiddlePip.swift */; };
+		BCB818BD1E64EC5D00D2F698 /* TopLeftPip.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB818B61E64EC5D00D2F698 /* TopLeftPip.swift */; };
+		BCB818BE1E64EC5D00D2F698 /* LeftPip.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB818B71E64EC5D00D2F698 /* LeftPip.swift */; };
+		BCB818BF1E64EC5D00D2F698 /* BottomLeftPip.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB818B81E64EC5D00D2F698 /* BottomLeftPip.swift */; };
+		BCB818C01E64EC5D00D2F698 /* RightPip.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB818B91E64EC5D00D2F698 /* RightPip.swift */; };
+		BCB818C11E64EC5D00D2F698 /* TopRightPip.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB818BA1E64EC5D00D2F698 /* TopRightPip.swift */; };
+		BCB818C21E64EC5D00D2F698 /* BottomRightPip.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB818BB1E64EC5D00D2F698 /* BottomRightPip.swift */; };
+		BCB818C51E64ECDF00D2F698 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB818C41E64ECDF00D2F698 /* Constants.swift */; };
+		BCB818C71E64F3EA00D2F698 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB818C61E64F3EA00D2F698 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +49,6 @@
 /* Begin PBXFileReference section */
 		BC8BA8D51E623BF800C4D233 /* 2D Dice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2D Dice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8BA8D81E623BF800C4D233 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BC8BA8DA1E623BF800C4D233 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BC8BA8DD1E623BF800C4D233 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC8BA8DF1E623BF800C4D233 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC8BA8E21E623BF800C4D233 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +59,20 @@
 		BC8BA8F41E623BF800C4D233 /* 2D DiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "2D DiceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8BA8F81E623BF800C4D233 /* _D_DiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _D_DiceUITests.swift; sourceTree = "<group>"; };
 		BC8BA8FA1E623BF800C4D233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCB818A81E64EB9A00D2F698 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		BCB818AA1E64EC0200D2F698 /* DiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiceModel.swift; sourceTree = "<group>"; };
+		BCB818AF1E64EC4800D2F698 /* DiceHolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiceHolderView.swift; sourceTree = "<group>"; };
+		BCB818B11E64EC5300D2F698 /* OvalOutlineLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OvalOutlineLayer.swift; sourceTree = "<group>"; };
+		BCB818B21E64EC5300D2F698 /* RoundedRectLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedRectLayer.swift; sourceTree = "<group>"; };
+		BCB818B51E64EC5D00D2F698 /* MiddlePip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiddlePip.swift; sourceTree = "<group>"; };
+		BCB818B61E64EC5D00D2F698 /* TopLeftPip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopLeftPip.swift; sourceTree = "<group>"; };
+		BCB818B71E64EC5D00D2F698 /* LeftPip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftPip.swift; sourceTree = "<group>"; };
+		BCB818B81E64EC5D00D2F698 /* BottomLeftPip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomLeftPip.swift; sourceTree = "<group>"; };
+		BCB818B91E64EC5D00D2F698 /* RightPip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightPip.swift; sourceTree = "<group>"; };
+		BCB818BA1E64EC5D00D2F698 /* TopRightPip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRightPip.swift; sourceTree = "<group>"; };
+		BCB818BB1E64EC5D00D2F698 /* BottomRightPip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomRightPip.swift; sourceTree = "<group>"; };
+		BCB818C41E64ECDF00D2F698 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BCB818C61E64F3EA00D2F698 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				BC8BA8D71E623BF800C4D233 /* 2D Dice */,
+				BCB818C31E64ECA800D2F698 /* Utiltities */,
 				BC8BA8EC1E623BF800C4D233 /* 2D DiceTests */,
 				BC8BA8F71E623BF800C4D233 /* 2D DiceUITests */,
 				BC8BA8D61E623BF800C4D233 /* Products */,
@@ -98,9 +125,12 @@
 			isa = PBXGroup;
 			children = (
 				BC8BA8D81E623BF800C4D233 /* AppDelegate.swift */,
-				BC8BA8DA1E623BF800C4D233 /* ViewController.swift */,
-				BC8BA8DC1E623BF800C4D233 /* Main.storyboard */,
+				BCB818A81E64EB9A00D2F698 /* RootViewController.swift */,
+				BCB818C61E64F3EA00D2F698 /* SettingsViewController.swift */,
+				BCB818AA1E64EC0200D2F698 /* DiceModel.swift */,
+				BCB818AC1E64EC1B00D2F698 /* Dice View */,
 				BC8BA8DF1E623BF800C4D233 /* Assets.xcassets */,
+				BC8BA8DC1E623BF800C4D233 /* Main.storyboard */,
 				BC8BA8E11E623BF800C4D233 /* LaunchScreen.storyboard */,
 				BC8BA8E41E623BF800C4D233 /* Info.plist */,
 			);
@@ -123,6 +153,48 @@
 				BC8BA8FA1E623BF800C4D233 /* Info.plist */,
 			);
 			path = "2D DiceUITests";
+			sourceTree = "<group>";
+		};
+		BCB818AC1E64EC1B00D2F698 /* Dice View */ = {
+			isa = PBXGroup;
+			children = (
+				BCB818AF1E64EC4800D2F698 /* DiceHolderView.swift */,
+				BCB818AD1E64EC2800D2F698 /* Layers */,
+			);
+			name = "Dice View";
+			sourceTree = "<group>";
+		};
+		BCB818AD1E64EC2800D2F698 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				BCB818B11E64EC5300D2F698 /* OvalOutlineLayer.swift */,
+				BCB818B21E64EC5300D2F698 /* RoundedRectLayer.swift */,
+				BCB818AE1E64EC3100D2F698 /* Pips */,
+			);
+			name = Layers;
+			sourceTree = "<group>";
+		};
+		BCB818AE1E64EC3100D2F698 /* Pips */ = {
+			isa = PBXGroup;
+			children = (
+				BCB818B51E64EC5D00D2F698 /* MiddlePip.swift */,
+				BCB818B61E64EC5D00D2F698 /* TopLeftPip.swift */,
+				BCB818B71E64EC5D00D2F698 /* LeftPip.swift */,
+				BCB818B81E64EC5D00D2F698 /* BottomLeftPip.swift */,
+				BCB818B91E64EC5D00D2F698 /* RightPip.swift */,
+				BCB818BA1E64EC5D00D2F698 /* TopRightPip.swift */,
+				BCB818BB1E64EC5D00D2F698 /* BottomRightPip.swift */,
+			);
+			name = Pips;
+			sourceTree = "<group>";
+		};
+		BCB818C31E64ECA800D2F698 /* Utiltities */ = {
+			isa = PBXGroup;
+			children = (
+				BCB818C41E64ECDF00D2F698 /* Constants.swift */,
+			);
+			name = Utiltities;
+			path = "2D Dice";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +334,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC8BA8DB1E623BF800C4D233 /* ViewController.swift in Sources */,
 				BC8BA8D91E623BF800C4D233 /* AppDelegate.swift in Sources */,
+				BCB818B31E64EC5300D2F698 /* OvalOutlineLayer.swift in Sources */,
+				BCB818C21E64EC5D00D2F698 /* BottomRightPip.swift in Sources */,
+				BCB818BD1E64EC5D00D2F698 /* TopLeftPip.swift in Sources */,
+				BCB818BC1E64EC5D00D2F698 /* MiddlePip.swift in Sources */,
+				BCB818B01E64EC4800D2F698 /* DiceHolderView.swift in Sources */,
+				BCB818C01E64EC5D00D2F698 /* RightPip.swift in Sources */,
+				BCB818BF1E64EC5D00D2F698 /* BottomLeftPip.swift in Sources */,
+				BCB818C71E64F3EA00D2F698 /* SettingsViewController.swift in Sources */,
+				BCB818BE1E64EC5D00D2F698 /* LeftPip.swift in Sources */,
+				BCB818B41E64EC5300D2F698 /* RoundedRectLayer.swift in Sources */,
+				BCB818A91E64EB9A00D2F698 /* RootViewController.swift in Sources */,
+				BCB818C51E64ECDF00D2F698 /* Constants.swift in Sources */,
+				BCB818C11E64EC5D00D2F698 /* TopRightPip.swift in Sources */,
+				BCB818AB1E64EC0200D2F698 /* DiceModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +599,7 @@
 				BC8BA8FF1E623BF800C4D233 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC8BA9001E623BF800C4D233 /* Build configuration list for PBXNativeTarget "2D DiceTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +608,7 @@
 				BC8BA9021E623BF800C4D233 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC8BA9031E623BF800C4D233 /* Build configuration list for PBXNativeTarget "2D DiceUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +617,7 @@
 				BC8BA9051E623BF800C4D233 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
