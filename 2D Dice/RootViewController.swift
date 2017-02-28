@@ -54,7 +54,7 @@ class RootViewController: UIViewController {
                 case 3:
                     infoLabel.text = "Nice! \n  Last one for good luck"
                 case 4...10:
-                    infoLabel.text = "Goodjob!!! \n Swipe down to clear the screen"
+                    infoLabel.text = "Good job!!! \n Swipe down to clear the screen"
                 case 11...20:
                     infoLabel.text = "Ummm... what are you doing?"
                 case 21...30:
