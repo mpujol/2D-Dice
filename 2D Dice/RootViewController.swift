@@ -42,7 +42,7 @@ class RootViewController: UIViewController {
                 
                 switch informationSequence {
                 case 0:
-                    infoLabel.text = "That's all you need to know. \n Have fun!"
+                    infoLabel.text = "and that's all you need to know. \n Have fun!"
                     onBoardingFinished = true
                     
                     UserDefaults.standard.set(true, forKey: "FinishedOnBoarding")
@@ -50,11 +50,31 @@ class RootViewController: UIViewController {
                 case 1:
                     infoLabel.text = "Cool! \n Roll Again"
                 case 2:
-                    infoLabel.text = "Again"
+                    infoLabel.text = "One more time!"
                 case 3:
-                    infoLabel.text = "Nice! \n  Roll 1 more"
-                case 4:
-                    infoLabel.text = " Goodjob!!! \n swipe down to clear the screen"
+                    infoLabel.text = "Nice! \n  Last one for good luck"
+                case 4...10:
+                    infoLabel.text = "Goodjob!!! \n Swipe down to clear the screen"
+                case 11...20:
+                    infoLabel.text = "Ummm... what are you doing?"
+                case 21...30:
+                    infoLabel.text = "SWIPE DOWN!?"
+                case 31...40:
+                    infoLabel.text = "Are you trying to break the app?"
+                case 41...50:
+                    infoLabel.text = "Ok.. I'm pretty sure you're just fooling around"
+                case 51...60:
+                    infoLabel.text = "It's not gonna break"
+                case 61...70:
+                    infoLabel.text = "Look at all the fingerprints on your screen."
+                case 71...80:
+                    infoLabel.text = "C'mon.. man!"
+                case 81...99:
+                    infoLabel.text = "SWIPE DOWN THE TUTORIAL IS OVER"
+                case 100:
+                    infoLabel.text = "Congrats on 100 dice on screen. -_-"
+                case 110:
+                    infoLabel.text = "Real Talk. \n This is the last message. Swipe down."
                 default:
                     break
                 }
