@@ -125,10 +125,9 @@
 			isa = PBXGroup;
 			children = (
 				BC8BA8D81E623BF800C4D233 /* AppDelegate.swift */,
-				BCB818A81E64EB9A00D2F698 /* RootViewController.swift */,
-				BCB818C61E64F3EA00D2F698 /* SettingsViewController.swift */,
-				BCB818AA1E64EC0200D2F698 /* DiceModel.swift */,
-				BCB818AC1E64EC1B00D2F698 /* Dice View */,
+				C66C5C4225F29EE20096FA28 /* View Controllers */,
+				C66C5C4125F29EDA0096FA28 /* Model */,
+				BCB818AC1E64EC1B00D2F698 /* Views */,
 				BC8BA8DF1E623BF800C4D233 /* Assets.xcassets */,
 				BC8BA8DC1E623BF800C4D233 /* Main.storyboard */,
 				BC8BA8E11E623BF800C4D233 /* LaunchScreen.storyboard */,
@@ -137,13 +136,13 @@
 			path = "2D Dice";
 			sourceTree = "<group>";
 		};
-		BCB818AC1E64EC1B00D2F698 /* Dice View */ = {
+		BCB818AC1E64EC1B00D2F698 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				BCB818AF1E64EC4800D2F698 /* DiceHolderView.swift */,
 				BCB818AD1E64EC2800D2F698 /* Layers */,
 			);
-			name = "Dice View";
+			name = Views;
 			sourceTree = "<group>";
 		};
 		BCB818AD1E64EC2800D2F698 /* Layers */ = {
@@ -177,6 +176,23 @@
 			);
 			name = Utiltities;
 			path = "2D Dice";
+			sourceTree = "<group>";
+		};
+		C66C5C4125F29EDA0096FA28 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BCB818AA1E64EC0200D2F698 /* DiceModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C66C5C4225F29EE20096FA28 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BCB818A81E64EB9A00D2F698 /* RootViewController.swift */,
+				BCB818C61E64F3EA00D2F698 /* SettingsViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 		C68AB62025F1D66600417982 /* 2D DiceTests */ = {

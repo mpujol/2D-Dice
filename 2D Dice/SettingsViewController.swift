@@ -9,7 +9,7 @@
 import UIKit
 import MessageUI
 
-class SettingsViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class SettingsViewController: UIViewController {
 
     var model: DiceModel!
     
@@ -67,50 +67,4 @@ class SettingsViewController: UIViewController, MFMailComposeViewControllerDeleg
         print("Swipe Recognized")
     
     }
-
-
-    //MARK: - Email Methods
-    
-    @IBAction func sendEmailButtonTapped(_ sender: UIButton) {
-        
-        let mailComposeViewController = configuredMailComposeViewController()
-        if MFMailComposeViewController.canSendMail() {
-            self.present(mailComposeViewController, animated: true, completion: nil)
-        } else {
-            self.showSendMailErrorAlert()
-        }
-        
-    }
-    
-    
-    func configuredMailComposeViewController() -> MFMailComposeViewController {
-        let mailComposerVC = MFMailComposeViewController()
-        mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
-        
-        mailComposerVC.setToRecipients(["mike.pujol88@gmail.com"])
-        mailComposerVC.setSubject("2D-Dice Feedback")
-        mailComposerVC.setMessageBody("", isHTML: false)
-        
-        return mailComposerVC
-    }
-    
-    func showSendMailErrorAlert() {
-        
-        
-        let sendMailErrorAlertController = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail. please check e-mail configuration and try again", preferredStyle: .alert)
-        
-        let okAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-        
-        sendMailErrorAlertController.addAction(okAction)
-        
-        self.present(sendMailErrorAlertController, animated: true, completion: nil)
-        
-    }
-    
-    // MARK: MFMailComposeViewControllerDelegate Method
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true, completion: nil)
-    }
-
-
 }
