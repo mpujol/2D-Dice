@@ -60,7 +60,7 @@ class DiceHolderView: UIView {
                              userInfo: nil, repeats: false)
     }
     
-    func addRoundedRect() {
+    @objc func addRoundedRect() {
         
         layer.addSublayer(roundedRectLayer)
         roundedRectLayer.expand()
@@ -73,7 +73,7 @@ class DiceHolderView: UIView {
         
     }
     
-    func addNumberOfPips() {
+    @objc func addNumberOfPips() {
 
         if let diceValue = self.value {
 

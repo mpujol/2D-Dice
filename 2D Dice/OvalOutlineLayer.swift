@@ -23,7 +23,7 @@ class OvalOutlineLayer: CAShapeLayer {
         let center = CGPoint(x: distanceToCenterOfCircle, y: distanceToCenterOfCircle)
         let radius = ovalSize / 2
         
-        return UIBezierPath(arcCenter: center, radius: radius, startAngle: CGFloat(-(M_PI / 2)), endAngle: (CGFloat((2 * M_PI) - (M_PI / 2))), clockwise: true)
+        return UIBezierPath(arcCenter: center, radius: radius, startAngle: CGFloat(-(Double.pi / 2)), endAngle: (CGFloat((2 * Double.pi) - (Double.pi / 2))), clockwise: true)
     }
     
     //MARK: - Required Methods
@@ -49,7 +49,7 @@ class OvalOutlineLayer: CAShapeLayer {
         strokeAnimation.fromValue = 0.0
         strokeAnimation.toValue = 1.0
         strokeAnimation.duration = animationDuration
-        strokeAnimation.fillMode = kCAFillModeForwards
+        strokeAnimation.fillMode = .forwards
         
         add(strokeAnimation, forKey: nil)
         

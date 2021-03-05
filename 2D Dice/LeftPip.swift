@@ -55,7 +55,7 @@ class LeftPip: CAShapeLayer {
         expandAnimation.fromValue = ovalPathSmall.cgPath
         expandAnimation.toValue = ovalPathFinal.cgPath
         expandAnimation.duration = animationDuration
-        expandAnimation.fillMode = kCAFillModeForwards
+        expandAnimation.fillMode = .forwards
         expandAnimation.isRemovedOnCompletion = false
         
         add(expandAnimation, forKey: nil)

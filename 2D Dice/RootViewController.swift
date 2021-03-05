@@ -156,8 +156,8 @@ class RootViewController: UIViewController {
         newHolderView.outlineOval()
         self.addDynamicBehaviors(to: newHolderView)
         
-        self.view.bringSubview(toFront: countStack)
-        self.view.bringSubview(toFront: infoStack)
+        self.view.bringSubviewToFront(countStack)
+        self.view.bringSubviewToFront(infoStack)
         
         
         

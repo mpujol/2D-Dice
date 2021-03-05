@@ -57,7 +57,7 @@ class RoundedRectLayer: CAShapeLayer {
         
         expandAnimation.fromValue = roundedRectSmall.cgPath
         expandAnimation.toValue = roundedRectBig.cgPath
-        expandAnimation.fillMode = kCAFillModeForwards
+        expandAnimation.fillMode = .forwards
         expandAnimation.duration = animationDuration
         expandAnimation.isRemovedOnCompletion = false
         
