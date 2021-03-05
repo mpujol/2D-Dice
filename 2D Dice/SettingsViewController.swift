@@ -27,9 +27,6 @@ class SettingsViewController: UIViewController {
         
         model.minValue = Int(sender.value)
         fromLabel.text = "\(model.minValue)"
-        
-        print(model.minValue)
-        
     }
     @IBAction func toValueStepper(_ sender: UIStepper) {
         
@@ -37,11 +34,8 @@ class SettingsViewController: UIViewController {
             sender.value = Double(self.model.minValue)
             return
         }
-        
         model.maxValue = Int(sender.value)
         toLabel.text = "\(model.maxValue)"
-        
-        print(model.maxValue)
     }
     
     override func viewDidLoad() {
@@ -62,9 +56,6 @@ class SettingsViewController: UIViewController {
     //MARK: - Segue
     
     @IBAction func dismissSettingsVC(_ sender: UISwipeGestureRecognizer) {
-    
         self.navigationController!.popViewController(animated: true)
-        print("Swipe Recognized")
-    
     }
 }

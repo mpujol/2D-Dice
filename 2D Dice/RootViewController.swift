@@ -29,77 +29,7 @@ class RootViewController: UIViewController {
     var diceSubviews = [DiceHolderView]() {
         didSet {
             
-            // Calculates the dice total
-            var totalValue = 0
-            
-            for dice in diceSubviews {
-                totalValue += dice.value!
-            }
-            
-            if !onBoardingFinished {
-                
-                let informationSequence = diceSubviews.count
-                
-                switch informationSequence {
-                case 0:
-                    infoLabel.text = "And that's all you need to know. \n Have fun!"
-                    onBoardingFinished = true
-                    
-                    UserDefaults.standard.set(true, forKey: "FinishedOnBoarding")
-                    
-                case 1:
-                    infoLabel.text = "Cool! \n Roll Again"
-                case 2:
-                    infoLabel.text = "One more time!"
-                case 3:
-                    infoLabel.text = "Nice! \n  Last one for good luck"
-                case 4...10:
-                    infoLabel.text = "Good job!!! \n Swipe down to clear the screen"
-                case 11...20:
-                    infoLabel.text = "Ummm... what are you doing?"
-                case 21...30:
-                    infoLabel.text = "SWIPE DOWN!?"
-                case 31...40:
-                    infoLabel.text = "Are you trying to break the app?"
-                case 41...50:
-                    infoLabel.text = "Ok.. I'm pretty sure you're just fooling around"
-                case 51...60:
-                    infoLabel.text = "It's not gonna break"
-                case 61...70:
-                    infoLabel.text = "Look at all the fingerprints on your screen."
-                case 71...80:
-                    infoLabel.text = "C'mon.. man!"
-                case 81...99:
-                    infoLabel.text = "SWIPE DOWN THE TUTORIAL IS OVER"
-                case 100:
-                    infoLabel.text = "Congrats on 100 dice on screen. -_-"
-                case 110:
-                    infoLabel.text = "Real Talk. \n This is the last message. Swipe down."
-                default:
-                    break
-                }
-                
-            } else {
-                UIView.animate(withDuration: 1.0, animations: {
-                    self.infoStack.alpha = 0
-                    self.infoButtonOutlet.isEnabled = true
-                })
-            }
-            
-
-            
-            
-            //Animates the total
-            Timer.scheduledTimer(withTimeInterval: 1.25, repeats: false) { (timer) in
-                
-                if self.diceSubviews.count > 0 {
-                    
-                    self.countStack.alpha = 1
-                    self.totalCountLabel.text = "\(totalValue)"
-                    
-                }
-                
-            }
+            updateLabels()
             
         }
     }
@@ -108,37 +38,24 @@ class RootViewController: UIViewController {
     @IBOutlet var countStack: UIStackView!
     @IBOutlet var infoStack: UIStackView!
     @IBOutlet var infoLabel: UILabel!
+    @IBOutlet weak var infoView: UIView!
     
     //MARK: - VLC
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(UserDefaults.standard.bool(forKey: "FinishedOnBoarding"))
-        
+        setupDynamicAnimator()
+        setupInfoView()
         if UserDefaults.standard.bool(forKey: "FinishedOnBoarding") == false {
-            
             onBoardingFinished = false
             infoButtonOutlet.isEnabled = false
-            
-            
         } else {
-            
             onBoardingFinished = true
-            self.infoStack.alpha = 0
+//            self.infoStack.alpha = 0
+            self.infoView.alpha = 0
             self.infoButtonOutlet.isEnabled = true
-            
         }
-        
-        
-        
-        setupDynamicAnimator()
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        print(model.minValue)
-        print(model.maxValue)
     }
     
     //MARK: - Helper Functions
@@ -152,18 +69,82 @@ class RootViewController: UIViewController {
         newHolderView.parentFrame = view.frame
         
         view.addSubview(newHolderView)
+        view.sendSubviewToBack(newHolderView)
         diceSubviews.append(newHolderView)
         newHolderView.outlineOval()
         self.addDynamicBehaviors(to: newHolderView)
+    }
+    
+    fileprivate func updateLabels() {
+        // Calculates the dice total
+        var totalValue = 0
         
-        self.view.bringSubviewToFront(countStack)
-        self.view.bringSubviewToFront(infoStack)
+        for dice in diceSubviews {
+            totalValue += dice.value!
+        }
         
+        if !onBoardingFinished {
+            let informationSequence = diceSubviews.count
+            switch informationSequence {
+            case 0:
+                infoLabel.text = "And that's all you need to know. \n Have fun!"
+                onBoardingFinished = true
+                
+                UserDefaults.standard.set(true, forKey: "FinishedOnBoarding")
+                
+            case 1:
+                infoLabel.text = "Cool! \n Roll Again"
+            case 2:
+                infoLabel.text = "One more time!"
+            case 3:
+                infoLabel.text = "Nice! \n  Last one for good luck"
+            case 4...10:
+                infoLabel.text = "Good job!!! \n Swipe down to clear the screen"
+            case 11...20:
+                infoLabel.text = "Ummm... what are you doing?"
+            case 21...30:
+                infoLabel.text = "SWIPE DOWN!?"
+            case 31...40:
+                infoLabel.text = "Are you trying to break the app?"
+            case 41...50:
+                infoLabel.text = "Ok.. I'm pretty sure you're just fooling around"
+            case 51...60:
+                infoLabel.text = "It's not gonna break"
+            case 61...70:
+                infoLabel.text = "Look at all the fingerprints on your screen."
+            case 71...80:
+                infoLabel.text = "C'mon.. man!"
+            case 81...99:
+                infoLabel.text = "SWIPE DOWN THE TUTORIAL IS OVER"
+            case 100:
+                infoLabel.text = "Congrats on 100 dice on screen. -_-"
+            case 110:
+                infoLabel.text = "Real Talk. \n This is the last message. Swipe down."
+            default:
+                break
+            }
+        } else {
+            UIView.animate(withDuration: 1.0, animations: {
+                self.infoView.alpha = 0
+                self.infoButtonOutlet.isEnabled = true
+            })
+        }
         
-        
-        //        print("There are \(view.subviews.count) subviews in the view")
-        
-        
+        //Animates the total
+        Timer.scheduledTimer(withTimeInterval: 1.25, repeats: false) { (timer) in
+            
+            if self.diceSubviews.count > 0 {
+                
+                self.countStack.alpha = 1
+                self.totalCountLabel.text = "\(totalValue)"
+                
+            }
+        }
+    }
+    
+    func setupInfoView() {
+        infoView.backgroundColor = .secondarySystemBackground
+        infoView.layer.cornerRadius = infoLabel.frame.height / 2
     }
     
     //MARK: - Actions
@@ -205,16 +186,11 @@ class RootViewController: UIViewController {
         infoLabel.text = "TAP anywhere to roll dice"
         
         UIView.animate(withDuration: 1.25) {
-            self.infoStack.alpha = 1
+            self.infoView.alpha = 0.9
             self.infoButtonOutlet.isEnabled = false
         }
         onBoardingFinished = false
-        
-        
-        
     }
-    
-
     
     @IBAction func showSettings(_ sender: AnyObject) {
         performSegue(withIdentifier: "showSettings", sender: sender)
@@ -274,5 +250,4 @@ class RootViewController: UIViewController {
         }
         
     }
-
 }
