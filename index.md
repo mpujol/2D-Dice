@@ -1,5 +1,3 @@
-![Demo](assets/img/2-D-Dice.gif)
-
 # Privacy Policy
 ## Overview
 This Privacy Policy describes how your personal information is handled in 2-D Dice on iOS.
